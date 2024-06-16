@@ -290,11 +290,6 @@ if(dato_rx>=0 && dato_rx<=100)
 		HAL_UART_Transmit(&huart1, (uint8_t*)mensaje, strlen(mensaje), HAL_MAX_DELAY);
 
 	}
-	else
-	{
-		char error[]="\rValor fuera de rango, por favor introducí un valor entre 0 y 100.\n\r";
-		HAL_UART_Transmit(&huart1, (uint8_t*)error, strlen(error), 100);
-	}
 	indice=0;
 }
 else if(buffer_rx[indice]=='\r'){
